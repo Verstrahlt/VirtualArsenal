@@ -42,13 +42,7 @@ _availableGoggles = [
 ];
 
 _availableUniforms = [
-	"U_B_CombatUniform_mcam",
-	"U_B_CombatUniform_mcam_tshirt",
-	"U_B_CombatUniform_mcam_vest",
-	"U_B_HeliPilotCoveralls",
-	"U_B_CTRG_1",
-	"U_B_CTRG_2",
-	"U_B_CTRG_3"
+        "rhsgref_uniform_ERDL",
 ];
 
 _availableVests = [
@@ -72,17 +66,9 @@ _availableBackpacks = [
 ];
 
 _availableWeapons = [
-	"rhs_Weapon_fim92",
-	"rhs_Weapon_launch_RPG7_F",
-	"rhs_Weapon_rpg7",
-	"rhs_Weapon_fgm148",
-	"rhs_Weapon_M136",
-	"rhs_Weapon_M136_hedp",
-	"rhs_Weapon_M136_hp"
-];
 
 //Populate with predefined items and whatever is already in the crate
 [_crate,((backpackCargo _crate) + _availableBackpacks)] call BIS_fnc_addVirtualBackpackCargo;
 [_crate,((itemCargo _crate) + _availableHeadgear + _availableGoggles + _availableUniforms + _availableVests)] call BIS_fnc_addVirtualItemCargo;
 [_crate,(magazineCargo _crate)] call BIS_fnc_addVirtualMagazineCargo;
-[_crate,(weaponCargo _crate)] call BIS_fnc_addVirtualWeaponCargo;
+//[_crate,(weaponCargo _crate)] call BIS_fnc_addVirtualWeaponCargo;
